@@ -4,3 +4,4 @@ Ricky Fok
 Uriah Foley
 Ethan Ngo
 Caleb Szeto
+Jairus Legion
