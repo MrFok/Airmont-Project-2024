@@ -49,9 +49,9 @@ def print_playlist_stats(playlist_id):
         track = item['track']
         track_id = track['id']
         statistics = get_song_statistics(track_id)
-        print(statistics)
+        print(statistics, '\n')
 
-playlist_id = '37i9dQZF1EQnqst5TRi17F'
+playlist_id = '37i9dQZF1DXcBWIGoYBM5M'
 print_playlist_stats(playlist_id)
     
 
