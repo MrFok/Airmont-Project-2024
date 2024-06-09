@@ -1,0 +1,22 @@
+[project]
+name = "Airmont-Project-2024"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "uuriah", email = "132951774+uuriah@users.noreply.github.com"},
+]
+dependencies = [
+    "librosa>=0.10.2.post1",
+    "pandas>=2.2.2",
+    "numpy>=1.26.4",
+    "matplotlib>=3.9.0",
+    "spotipy>=2.24.0",
+    "openpyxl>=3.1.3",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "None"}
+
+
+[tool.pdm]
+distribution = false
