@@ -1,5 +1,7 @@
 import spotipy
+import json
 from spotipy.oauth2 import SpotifyClientCredentials
+
 
 client_id = 'c1691a4a373e4bbc92ffc25525728a07'
 client_secret = '63bb642e930b4c698270d0e556fdb6e2'
@@ -27,7 +29,7 @@ def get_song_statistics(track_id):
         "valence": audio_features["valence"],
         "tempo": audio_features["tempo"]
     }
-
+    
     return song_statistics
 
 def get_playlist_tracks(playlist_id):
@@ -45,16 +47,16 @@ def print_playlist_stats(playlist_id):
     
     tracks = get_playlist_tracks(playlist_id)
 
+    playlist_statistics = []
     for item in tracks:
         track = item['track']
         track_id = track['id']
         statistics = get_song_statistics(track_id)
-        print(statistics, '\n')
-
-playlist_id = '37i9dQZF1DXcBWIGoYBM5M'
-print_playlist_stats(playlist_id)
+        playlist_statistics.append(statistics)
     
+    with open('grungeSongs.json', 'w') as outfile:
+        json.dump(playlist_statistics, outfile, indent=4)
 
-# track_id = '2Foc5Q5nqNiosCNqttzHof'
-# statistics = get_song_statistics(track_id)
-# print(statistics)
+
+playlist_id = '37i9dQZF1EIcpZCXN80nLP'
+print_playlist_stats(playlist_id)
