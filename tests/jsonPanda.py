@@ -3,15 +3,22 @@ import json
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import MinMaxScaler
+from spotipyTest import get_song_features
 
 pd.set_option('display.max_columns', None)
 
 #TODO: change file path to relative paths. 
-country_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/countrySongs.json'
-grunge_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/grungeSongs.json'
-metal_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/metalSongs.json'
-pop_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/popSongs.json'
-rap_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/rapSongs.json'
+country_song_stats = 'C:/Users/monke/Projects/Airmont-Project-2024/playlistStats/countrySongs.json'
+grunge_song_stats = 'C:/Users/monke/Projects/Airmont-Project-2024/playlistStats/grungeSongs.json'
+metal_song_stats = 'C:/Users/monke/Projects/Airmont-Project-2024/playlistStats/metalSongs.json'
+pop_song_stats = 'C:/Users/monke/Projects/Airmont-Project-2024/playlistStats/popSongs.json'
+rap_song_stats = 'C:/Users/monke/Projects/Airmont-Project-2024/playlistStats/rapSongs.json'
+
+# country_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/countrySongs.json'
+# grunge_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/grungeSongs.json'
+# metal_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/metalSongs.json'
+# pop_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/popSongs.json'
+# rap_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/rapSongs.json'
 
 with open(country_song_stats, 'r') as f:
     country_data = json.load(f)
@@ -64,12 +71,42 @@ def content_based_recommendations(input_song_name, num_recommendations=4):
 
     similarity_scores = cosine_similarity([music_features_scaled[input_song_index]], music_features_scaled)
 
-    similar_song_indices = similarity_scores.argsort()[0][::1][1:num_recommendations +1]
-
+    similar_song_indices = similarity_scores.argsort()[0][::-1][1:num_recommendations +1]
+    
     content_based_recommendations = music_df.iloc[similar_song_indices][['name']]
-
+    
     return content_based_recommendations
 
-input_song_name = input('Input a song name: ')
+input_song_name = input('Input a song name in the database: ')
 
-print(content_based_recommendations(input_song_name, num_recommendations=4))
+print(content_based_recommendations(input_song_name, num_recommendations=2))
+
+
+def modified_content_based_recommendations(input_song, num_recommendations=4):
+
+    similarity_scores = cosine_similarity(input_song, music_features_scaled)
+
+    similar_song_indices = similarity_scores.argsort()[0][::-1][1:num_recommendations +1]
+    
+    content_based_recommendations = music_df.iloc[similar_song_indices][['name']]
+    
+    return content_based_recommendations
+
+input_song_name = input('Input any song: ')
+input_features = get_song_features(input_song_name)
+
+if input_features:
+
+    song_df = pd.DataFrame([input_features])
+    print(song_df)
+    
+    input_song_features = song_df[['danceability', 'energy', 'loudness', 'speechiness',
+                                   'acousticness', 'instrumentalness', 'liveness',
+                                   'valence', 'tempo']]
+    
+    scaled_song_df = scaler.transform(input_song_features)
+    
+    print(modified_content_based_recommendations(scaled_song_df, num_recommendations=2))
+
+else:
+    print("No song found")
