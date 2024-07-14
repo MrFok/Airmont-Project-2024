@@ -16,8 +16,8 @@ def get_song_statistics(track_id):
 
     song_statistics = {
         "name": track_details["name"],
-        # "artist": track_details["artists"][0]["name"],
-        # "album": track_details["album"]["name"],
+        "artist": track_details["artists"][0]["name"],
+        "album": track_details["album"]["name"],
         # "popularity": track_details["popularity"],
         "danceability": audio_features["danceability"],
         "energy": audio_features["energy"],
@@ -27,7 +27,9 @@ def get_song_statistics(track_id):
         "instrumentalness": audio_features["instrumentalness"],
         "liveness": audio_features["liveness"],
         "valence": audio_features["valence"],
-        "tempo": audio_features["tempo"]
+        "tempo": audio_features["tempo"],
+        "mode": audio_features["mode"],
+        "duration": audio_features["duration_ms"]
     }
     
     return song_statistics
@@ -54,9 +56,9 @@ def print_playlist_stats(playlist_id):
         statistics = get_song_statistics(track_id)
         playlist_statistics.append(statistics)
     
-    with open('grungeSongs.json', 'w') as outfile:
+    with open('rapSongs.json', 'w') as outfile:
         json.dump(playlist_statistics, outfile, indent=4)
 
 
-playlist_id = '37i9dQZF1EIcpZCXN80nLP'
+playlist_id = '37i9dQZF1DX0XUsuxWHRQd'
 print_playlist_stats(playlist_id)
