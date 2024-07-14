@@ -59,6 +59,18 @@ def print_playlist_stats(playlist_id):
     with open('rapSongs.json', 'w') as outfile:
         json.dump(playlist_statistics, outfile, indent=4)
 
+def get_song_features(name):
+
+    result = sp.search(q=name, type='track', limit=1)
+
+    if not result['tracks']['items']:
+        return None
+    
+    track = result['tracks']['items'][0]
+
+    track_id = track['id']
+    
+    return get_song_statistics(track_id)
 
 playlist_id = '37i9dQZF1DX0XUsuxWHRQd'
 print_playlist_stats(playlist_id)
