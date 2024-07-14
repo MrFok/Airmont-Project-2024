@@ -27,6 +27,7 @@ def get_song_statistics(track_id):
         "instrumentalness": audio_features["instrumentalness"],
         "liveness": audio_features["liveness"],
         "valence": audio_features["valence"],
+        "key": audio_features["key"],
         "tempo": audio_features["tempo"],
         "mode": audio_features["mode"],
         "duration": audio_features["duration_ms"]
@@ -74,3 +75,4 @@ def get_song_features(name):
 
 playlist_id = '37i9dQZF1DX0XUsuxWHRQd'
 print_playlist_stats(playlist_id)
+
