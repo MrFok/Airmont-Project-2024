@@ -11,6 +11,7 @@
         "instrumentalness": 0,
         "liveness": 0.0912,
         "valence": 0.505,
+        "key": 6,
         "tempo": 107.409,
         "mode": 1,
         "duration": 176023
@@ -27,6 +28,7 @@
         "instrumentalness": 0,
         "liveness": 0.308,
         "valence": 0.861,
+        "key": 11,
         "tempo": 119.033,
         "mode": 1,
         "duration": 195123
@@ -43,6 +45,7 @@
         "instrumentalness": 0,
         "liveness": 0.549,
         "valence": 0.785,
+        "key": 5,
         "tempo": 129.963,
         "mode": 1,
         "duration": 168454
@@ -59,6 +62,7 @@
         "instrumentalness": 3.75e-06,
         "liveness": 0.108,
         "valence": 0.738,
+        "key": 0,
         "tempo": 114.902,
         "mode": 1,
         "duration": 171783
@@ -75,6 +79,7 @@
         "instrumentalness": 8.62e-06,
         "liveness": 0.165,
         "valence": 0.399,
+        "key": 8,
         "tempo": 172.037,
         "mode": 1,
         "duration": 181621
@@ -91,6 +96,7 @@
         "instrumentalness": 0,
         "liveness": 0.0804,
         "valence": 0.604,
+        "key": 9,
         "tempo": 81.012,
         "mode": 1,
         "duration": 171292
@@ -107,6 +113,7 @@
         "instrumentalness": 0,
         "liveness": 0.104,
         "valence": 0.789,
+        "key": 5,
         "tempo": 116.093,
         "mode": 1,
         "duration": 170240
@@ -123,6 +130,7 @@
         "instrumentalness": 3.58e-05,
         "liveness": 0.665,
         "valence": 0.772,
+        "key": 0,
         "tempo": 171.977,
         "mode": 1,
         "duration": 189787
@@ -139,6 +147,7 @@
         "instrumentalness": 0.000994,
         "liveness": 0.132,
         "valence": 0.349,
+        "key": 11,
         "tempo": 197.768,
         "mode": 1,
         "duration": 220558
@@ -155,6 +164,7 @@
         "instrumentalness": 0,
         "liveness": 0.161,
         "valence": 0.456,
+        "key": 11,
         "tempo": 86.494,
         "mode": 1,
         "duration": 230600
@@ -171,6 +181,7 @@
         "instrumentalness": 7.54e-05,
         "liveness": 0.0912,
         "valence": 0.382,
+        "key": 1,
         "tempo": 81.053,
         "mode": 0,
         "duration": 198069
@@ -187,6 +198,7 @@
         "instrumentalness": 0.00777,
         "liveness": 0.1,
         "valence": 0.282,
+        "key": 5,
         "tempo": 142.18,
         "mode": 1,
         "duration": 210950
@@ -203,6 +215,7 @@
         "instrumentalness": 0,
         "liveness": 0.321,
         "valence": 0.482,
+        "key": 2,
         "tempo": 127.85,
         "mode": 1,
         "duration": 191438
@@ -219,6 +232,7 @@
         "instrumentalness": 0,
         "liveness": 0.245,
         "valence": 0.731,
+        "key": 7,
         "tempo": 127.986,
         "mode": 1,
         "duration": 178206
@@ -235,6 +249,7 @@
         "instrumentalness": 5.23e-06,
         "liveness": 0.159,
         "valence": 0.29,
+        "key": 2,
         "tempo": 150.73,
         "mode": 1,
         "duration": 178196
@@ -251,6 +266,7 @@
         "instrumentalness": 0,
         "liveness": 0.391,
         "valence": 0.895,
+        "key": 2,
         "tempo": 120.063,
         "mode": 1,
         "duration": 165000
@@ -267,6 +283,7 @@
         "instrumentalness": 5.14e-05,
         "liveness": 0.135,
         "valence": 0.253,
+        "key": 0,
         "tempo": 84.999,
         "mode": 1,
         "duration": 194920
@@ -283,6 +300,7 @@
         "instrumentalness": 0,
         "liveness": 0.21,
         "valence": 0.455,
+        "key": 11,
         "tempo": 128.942,
         "mode": 1,
         "duration": 224280
@@ -299,6 +317,7 @@
         "instrumentalness": 0,
         "liveness": 0.114,
         "valence": 0.519,
+        "key": 7,
         "tempo": 79.912,
         "mode": 1,
         "duration": 183920
@@ -315,6 +334,7 @@
         "instrumentalness": 0,
         "liveness": 0.303,
         "valence": 0.538,
+        "key": 1,
         "tempo": 93.155,
         "mode": 1,
         "duration": 192693
@@ -331,6 +351,7 @@
         "instrumentalness": 0,
         "liveness": 0.28,
         "valence": 0.384,
+        "key": 6,
         "tempo": 113.05,
         "mode": 1,
         "duration": 153907
@@ -347,6 +368,7 @@
         "instrumentalness": 1.27e-06,
         "liveness": 0.0999,
         "valence": 0.353,
+        "key": 5,
         "tempo": 139.963,
         "mode": 1,
         "duration": 187333
@@ -363,6 +385,7 @@
         "instrumentalness": 8.32e-06,
         "liveness": 0.358,
         "valence": 0.449,
+        "key": 7,
         "tempo": 105.03,
         "mode": 1,
         "duration": 196400
@@ -379,6 +402,7 @@
         "instrumentalness": 0,
         "liveness": 0.393,
         "valence": 0.468,
+        "key": 9,
         "tempo": 128.007,
         "mode": 1,
         "duration": 163894
@@ -395,6 +419,7 @@
         "instrumentalness": 0,
         "liveness": 0.236,
         "valence": 0.707,
+        "key": 5,
         "tempo": 139.69,
         "mode": 1,
         "duration": 133016
@@ -411,6 +436,7 @@
         "instrumentalness": 0,
         "liveness": 0.0768,
         "valence": 0.51,
+        "key": 1,
         "tempo": 130.007,
         "mode": 1,
         "duration": 179051
@@ -427,6 +453,7 @@
         "instrumentalness": 0,
         "liveness": 0.224,
         "valence": 0.515,
+        "key": 8,
         "tempo": 123.925,
         "mode": 1,
         "duration": 211992
@@ -443,6 +470,7 @@
         "instrumentalness": 0,
         "liveness": 0.0926,
         "valence": 0.19,
+        "key": 0,
         "tempo": 111.012,
         "mode": 1,
         "duration": 211541
@@ -459,6 +487,7 @@
         "instrumentalness": 0,
         "liveness": 0.124,
         "valence": 0.619,
+        "key": 6,
         "tempo": 171.829,
         "mode": 1,
         "duration": 166040
@@ -475,6 +504,7 @@
         "instrumentalness": 0,
         "liveness": 0.107,
         "valence": 0.623,
+        "key": 6,
         "tempo": 138.077,
         "mode": 1,
         "duration": 179413
@@ -491,6 +521,7 @@
         "instrumentalness": 2.74e-06,
         "liveness": 0.0858,
         "valence": 0.591,
+        "key": 10,
         "tempo": 151.872,
         "mode": 1,
         "duration": 201807
@@ -507,6 +538,7 @@
         "instrumentalness": 0,
         "liveness": 0.12,
         "valence": 0.432,
+        "key": 7,
         "tempo": 95.117,
         "mode": 1,
         "duration": 195158
@@ -523,6 +555,7 @@
         "instrumentalness": 0,
         "liveness": 0.0983,
         "valence": 0.564,
+        "key": 10,
         "tempo": 140.154,
         "mode": 1,
         "duration": 165836
@@ -539,6 +572,7 @@
         "instrumentalness": 0,
         "liveness": 0.0918,
         "valence": 0.382,
+        "key": 10,
         "tempo": 145.864,
         "mode": 1,
         "duration": 199728
@@ -555,6 +589,7 @@
         "instrumentalness": 0,
         "liveness": 0.233,
         "valence": 0.664,
+        "key": 7,
         "tempo": 78.194,
         "mode": 1,
         "duration": 184173
@@ -571,6 +606,7 @@
         "instrumentalness": 0,
         "liveness": 0.158,
         "valence": 0.271,
+        "key": 10,
         "tempo": 150.054,
         "mode": 0,
         "duration": 186973
@@ -587,6 +623,7 @@
         "instrumentalness": 0,
         "liveness": 0.317,
         "valence": 0.418,
+        "key": 5,
         "tempo": 76.968,
         "mode": 1,
         "duration": 182086
@@ -603,6 +640,7 @@
         "instrumentalness": 0,
         "liveness": 0.193,
         "valence": 0.352,
+        "key": 5,
         "tempo": 148.117,
         "mode": 1,
         "duration": 222466
@@ -619,6 +657,7 @@
         "instrumentalness": 8.47e-05,
         "liveness": 0.0693,
         "valence": 0.435,
+        "key": 7,
         "tempo": 80.868,
         "mode": 1,
         "duration": 233333
@@ -635,6 +674,7 @@
         "instrumentalness": 0.000704,
         "liveness": 0.129,
         "valence": 0.548,
+        "key": 8,
         "tempo": 92.089,
         "mode": 1,
         "duration": 228347
@@ -651,6 +691,7 @@
         "instrumentalness": 4.39e-05,
         "liveness": 0.21,
         "valence": 0.525,
+        "key": 11,
         "tempo": 171.904,
         "mode": 1,
         "duration": 236055
@@ -667,6 +708,7 @@
         "instrumentalness": 0,
         "liveness": 0.11,
         "valence": 0.607,
+        "key": 2,
         "tempo": 168.184,
         "mode": 1,
         "duration": 187880
@@ -683,6 +725,7 @@
         "instrumentalness": 0,
         "liveness": 0.18,
         "valence": 0.609,
+        "key": 7,
         "tempo": 104.012,
         "mode": 1,
         "duration": 164264
@@ -699,6 +742,7 @@
         "instrumentalness": 0.215,
         "liveness": 0.132,
         "valence": 0.607,
+        "key": 6,
         "tempo": 91.866,
         "mode": 0,
         "duration": 222800
@@ -715,6 +759,7 @@
         "instrumentalness": 0,
         "liveness": 0.125,
         "valence": 0.559,
+        "key": 7,
         "tempo": 139.862,
         "mode": 1,
         "duration": 197067
@@ -731,6 +776,7 @@
         "instrumentalness": 0,
         "liveness": 0.353,
         "valence": 0.403,
+        "key": 6,
         "tempo": 170.147,
         "mode": 1,
         "duration": 152213
@@ -747,6 +793,7 @@
         "instrumentalness": 1.51e-05,
         "liveness": 0.124,
         "valence": 0.143,
+        "key": 4,
         "tempo": 125.997,
         "mode": 0,
         "duration": 199392
@@ -763,6 +810,7 @@
         "instrumentalness": 0,
         "liveness": 0.158,
         "valence": 0.393,
+        "key": 7,
         "tempo": 76.821,
         "mode": 1,
         "duration": 197133
@@ -779,6 +827,7 @@
         "instrumentalness": 0,
         "liveness": 0.082,
         "valence": 0.471,
+        "key": 9,
         "tempo": 130.077,
         "mode": 1,
         "duration": 209077
@@ -795,6 +844,7 @@
         "instrumentalness": 0,
         "liveness": 0.115,
         "valence": 0.536,
+        "key": 7,
         "tempo": 140.13,
         "mode": 1,
         "duration": 189048
