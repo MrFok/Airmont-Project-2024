@@ -54,27 +54,6 @@ music_features_scaled = scaler.fit_transform(music_features)
 
 stats_df = pd.DataFrame(music_features_scaled)
 
-
-# def content_based_recommendations(input_song_name, num_recommendations=2):
-#     if input_song_name not in music_df['name'].values:
-#         print(f"'{input_song_name}' not found in the dataset. Please enter a valid song name.")
-#         return
-    
-#     input_song_index = music_df[music_df['name'] == input_song_name].index[0]
-
-#     similarity_scores = cosine_similarity([music_features_scaled[input_song_index]], music_features_scaled)
-
-#     similar_song_indices = similarity_scores.argsort()[0][::-1][1:num_recommendations +1]
-    
-#     content_based_recommendations = music_df.iloc[similar_song_indices][['name', 'artist', 'album']]
-    
-#     return content_based_recommendations
-
-# input_song_name = input('Input a song name in the database: ')
-
-# print(content_based_recommendations(input_song_name, num_recommendations=2))
-
-
 def modified_content_based_recommendations(input_song, num_recommendations=4):
 
     similarity_scores = cosine_similarity(input_song, music_features_scaled)
