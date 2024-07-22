@@ -7,11 +7,11 @@ from spotipyTest import get_song_features
 
 pd.set_option('display.max_columns', None)
 
-country_song_stats = '../playlistStats/countrySongs.json'
-grunge_song_stats = '../playlistStats/grungeSongs.json'
-metal_song_stats = '../playlistStats/metalSongs.json'
-pop_song_stats = '../playlistStats/popSongs.json'
-rap_song_stats = '../playlistStats/rapSongs.json'
+country_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/countrySongs.json'
+grunge_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/grungeSongs.json'
+metal_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/metalSongs.json'
+pop_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/popSongs.json'
+rap_song_stats = '/Users/uriah/Desktop/repos/ocarina2/Airmont-Project-2024/playlistStats/rapSongs.json'
 
 with open(country_song_stats, 'r') as f:
     country_data = json.load(f)
@@ -52,15 +52,27 @@ music_features = music_df[['danceability', 'energy', 'loudness', 'speechiness',
                      'valence', 'key', 'tempo', 'mode', 'duration']]
 music_features_scaled = scaler.fit_transform(music_features)
 
+music_features_df = pd.DataFrame(music_features_scaled)
+
 stats_df = pd.DataFrame(music_features_scaled)
 
 def modified_content_based_recommendations(input_song, num_recommendations=4):
 
     similarity_scores = cosine_similarity(input_song, music_features_scaled)
 
+    sim_scores_df = pd.DataFrame(similarity_scores).to_excel("simScores01.xlsx")
+
     similar_song_indices = similarity_scores.argsort()[0][::-1][1:num_recommendations +1]
+
+    #print(similar_song_indices)
     
     content_based_recommendations = music_df.iloc[similar_song_indices][['name', 'artist', 'album']]
+
+    similar_song_scaled_stats = music_features_df.iloc[similar_song_indices]
+    
+    print(similar_song_scaled_stats)
+
+    song_recs_df = pd.DataFrame(content_based_recommendations).to_excel("songRecs.xlsx")
     
     return content_based_recommendations
 
@@ -77,6 +89,8 @@ if input_features:
                                    'valence', 'key', 'tempo' ,'mode', 'duration']]
     
     scaled_song_df = scaler.transform(input_song_features)
+    
+    print(input_song_features)
     
     print(modified_content_based_recommendations(scaled_song_df, num_recommendations=2))
 
