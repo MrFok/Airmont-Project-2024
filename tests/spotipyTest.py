@@ -57,8 +57,8 @@ def print_playlist_stats(playlist_id):
         statistics = get_song_statistics(track_id)
         playlist_statistics.append(statistics)
     
-    with open('rapSongs.json', 'w') as outfile:
-        json.dump(playlist_statistics, outfile, indent=4)
+    # with open('rapSongs.json', 'w') as outfile:
+    #     json.dump(playlist_statistics, outfile, indent=4)
 
 def get_song_features(name):
 
@@ -73,6 +73,6 @@ def get_song_features(name):
     
     return get_song_statistics(track_id)
 
-playlist_id = '37i9dQZF1DX0XUsuxWHRQd'
-print_playlist_stats(playlist_id)
+# playlist_id = '37i9dQZF1DX0XUsuxWHRQd'
+# print_playlist_stats(playlist_id)
 
