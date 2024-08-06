@@ -103,9 +103,15 @@ Input: List of songs(max: 5), limit: max number of recommendations
 Output: Array of tracks
 	Gets recommendations through seed_id
 '''
-def getRecById(songs, limit):
+def getRecById(songs, artists, genres, limit):
 	
 	seed_IDS =  []
+	seed_artists = []
+
+	# Exceeds the limit of seed categorys
+	if len(songs) + len(artists) + len(genres) > 5:
+		return None
+	
 	for song in songs:
 		result = sp.search(q=song, type="track", limit=1)
 
@@ -118,20 +124,44 @@ def getRecById(songs, limit):
 
 		song_id = track['id']
 		seed_IDS.append(song_id)
+	
+	for artist in artists:
+		result = sp.search(q=artist, type="artist", limit=1)
 		
+		if not result['artists']['items']:
+			continue
+		
+		artist = result['artists']['items'][0]
+		print(artist["name"] + ": " + artist["id"])
+
+		seed_artists.append(artist["id"])
+
 	# returns a list of recommendations
-	recommendations = sp.recommendations(seed_tracks=seed_IDS, limit=limit, market="US")
+	recommendations = sp.recommendations(seed_tracks=seed_IDS, seed_artists=seed_artists, seed_genres=genres, limit=limit, market="US")
 	return recommendations['tracks']
 
 
+genres = ['acoustic', 'afrobeat', 'alt-rock', 'alternative', 'ambient', 'anime', 'black-metal', 'bluegrass', 'blues', 'bossanova', 'brazil', 'breakbeat', 'british', 'cantopop', 'chicago-house', 'children', 'chill', 'classical', 'club', 'comedy', 'country', 'dance', 'dancehall', 'death-metal', 'deep-house', 'detroit-techno', 'disco', 'disney', 'drum-and-bass', 'dub', 'dubstep', 'edm', 'electro', 'electronic', 'emo', 'folk', 'forro', 'french', 'funk', 'garage', 'german', 'gospel', 'goth', 'grindcore', 'groove', 'grunge', 'guitar', 'happy', 'hard-rock', 'hardcore', 'hardstyle', 'heavy-metal', 'hip-hop', 'holidays', 'honky-tonk', 'house', 'idm', 'indian', 'indie', 'indie-pop', 'industrial', 'iranian', 'j-dance', 'j-idol', 'j-pop', 'j-rock', 'jazz', 'k-pop', 'kids', 'latin', 'latino', 'malay', 'mandopop', 'metal', 'metal-misc', 'metalcore', 'minimal-techno', 'movies', 'mpb', 'new-age', 'new-release', 'opera', 'pagode', 'party', 'philippines-opm', 'piano', 'pop', 'pop-film', 'post-dubstep', 'power-pop', 'progressive-house', 'psych-rock', 'punk', 'punk-rock', 'r-n-b', 'rainy-day', 'reggae', 'reggaeton', 'road-trip', 'rock', 'rock-n-roll', 'rockabilly', 'romance', 'sad', 'salsa', 'samba', 'sertanejo', 'show-tunes', 'singer-songwriter', 'ska', 'sleep', 'songwriter', 'soul', 'soundtracks', 'spanish', 'study', 'summer', 'swedish', 'synth-pop', 'tango', 'techno', 'trance', 'trip-hop', 'turkish', 'work-out', 'world-music']
 
-songs = ["Play Ball!", "Blue Honey", "All The Small Things", "Tunnel Vision by Montee lynel", "Nordic Sunrise (Alpha Drone 8Hz)"]
-recommendations = getRecById(songs, 5)
+
+songs = ["Not Like Us by Kendrick Lamar", "Magnolia by Playboy Carti"]
+recommendations = getRecById(songs, [], [], 5)
+
+if not recommendations:
+	print("Invalid number of seeds")
 for track in recommendations:
 	print(f"{track['name']} by {track['artists'][0]['name']}")
+print("")
+print("")
 
 
-# recommendations = getRecByFeature("The Spins by Mac Miller", 5, False, False)
+recommendations = getRecById(songs, [], [genres[5]], 5)
+for track in recommendations:
+	print(f"{track['name']} by {track['artists'][0]['name']}")
+print("")
+print("")
 
-# for track in recommendations:
-# 	print(f"{track['name']} by {track['artists'][0]['name']}")
+
+recommendations = getRecById(songs, ["Weston Estate", "Arctic Monkeys"], [], 5)
+for track in recommendations:
+	print(f"{track['name']} by {track['artists'][0]['name']}")
