@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Desktop - 1 */
+body{
+    position: relative;
+    min-width: 1440px;
+    min-height: 1028px;
+
+    background: #2D2D2D;
+}
+
+/* Ocarina */
+.header{
+    
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    min-width: 1440px;
+    height: 80px;
+    z-index: 2;
+    background-color: rgb(28, 28, 28);
+
+}
+
+.logo{
+    position: absolute;
+    width: 126px;
+    height: 49px;
+    left: 26px;
+    top: 20px; 
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+/* Rectangle 1 */
+
+.left-youtube{
+    position: absolute;
+    width: 400px;
+    height: 308px;
+    left: 220px;
+    top: 250px;
+    z-index: 1;
+    background: #212020;
+    border-radius: 10px;
+}
+
+
+/* Rectangle 2 */
+
+.right-youtube{
+    position: absolute;
+    width: 400px;
+    height: 308px;
+    left: 820px;
+    top: 250px;
+    z-index: 0;
+    background: #212020;
+    border-radius: 10px;
+}   
+
+
+/* Rectangle 3 */
+.left-song-box{
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    left: 220px;
+    top: 600px;
+    display:flex;
+    justify-content: center;
+
+    background: #FFFFFF;
+    border-radius: 2px;
+}
+
+/* Example text that will display the artist and name of the song being played */
+.left-song-text{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+/* Rectangle 5 */
+
+.right-song-box{
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    left: 820px;
+    top: 600px;
+    display:flex;
+    justify-content: center;
+    background: #000000;
+    border-radius: 2px;
+}
+/* Example text that will display the artist and name of the song being played */
+.right-song-text{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+/* Rectangle 4 */
+.right-button{
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    left: 895px;
+    top: 689px;
+    display:flex;
+    justify-content: center;
+    background: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+/* Choose */
+.right-button{
+
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+/* Rectangle 6 */
+.left-button{
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    left: 295px;
+    top: 689px;
+    display:flex;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+/* Choose */
+.left-button{
+
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.left-button:hover{
+    color: rgb(219, 12, 12);
+}
+
+.right-button:hover{
+    color: rgb(219, 12, 12);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
